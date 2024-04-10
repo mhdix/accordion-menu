@@ -13,14 +13,13 @@
   --color-primary-red: #ff4f4f;
   --color-primary: rgba(0, 148, 126, 0.901);
   --color-text-white:#fdfdfdfd ;
-  --font-size: 1.6rem;
 }
 html {
   font-size: 62.5%;
 }
 body {
-  font-size: var(--font-size);
-  line-height: 1.7;
+  font-size: 1.4rem;
+  line-height: 1.8;
 }
 p {
     margin: 0;
@@ -32,16 +31,23 @@ h3 {
   line-height: 1.7;
 }
 h1 {
-  font-size: 2.7rem;
-
+  font-size: 2rem;
 }
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 1024px) {
-
+    body {
+        font-size: 1.6rem;
+    }
+    h1 {
+        font-size: 2.7;
+    }
+    h2 {
+        font-size: 2.2;
+    }
 }
 /* Modifire */
 .badge {
@@ -89,6 +95,9 @@ h2 {
 /* Accrdion */
 
 /* CV */
+.cv-parrent {
+    padding: 2rem 3rem;
+}
 .cv__header {
     display: flex;
     justify-content: space-between;
@@ -98,7 +107,7 @@ h2 {
     display: flex;
     gap: 1rem;
 }
-.cv__header .action  span{
+.cv__header .action span{
     border: 1px solid var(--color-primary);
     border-radius: 100px;
     width: 3rem;
@@ -113,34 +122,53 @@ h2 {
 }
 /* Item */
 .item__image {
-    width: 150px;
-    height: 150px;
-    border: 1px solid var(--color-text);
-    border-radius: 8px;
+    width: auto;
+    object-fit: cover;
+    height: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+.item__image img {
+    max-width: 250px;
+    max-height: 180px;
+    object-fit: cover;
 }
 .item__caption {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;   
 }
-
+@media screen and (min-width:768px) {
+    .item__image {
+        justify-content: start;
+    }
+}
 /* Resume */
 .resume__item {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
-
+@media screen and (min-width:1024px) {
+    .resume__item {
+        flex-direction: row;
+    }   
+}
 /* Caption */
 .caption__header {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
 }
 .header__item {
     display: flex;
     column-gap: 1.5rem;
     flex-wrap: wrap;
     position: relative;
+}
+@media screen and (min-width:1024) {
+    .caption__header {
+        margin-bottom: 0;
+    }
 }
