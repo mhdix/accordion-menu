@@ -1,0 +1,146 @@
+/* Reset */
+*,
+*::after,
+*::backdrop {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Root variable */
+:root {
+  --color-text: #444;
+  --color-parent: #fff;
+  --color-primary-red: #ff4f4f;
+  --color-primary: rgba(0, 148, 126, 0.901);
+  --color-text-white:#fdfdfdfd ;
+  --font-size: 1.6rem;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: var(--font-size);
+  line-height: 1.7;
+}
+p {
+    margin: 0;
+}
+h1,
+h2,
+h3 {
+  color: var(--color-text);
+  line-height: 1.7;
+}
+h1 {
+  font-size: 2.7rem;
+
+}
+h2 {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+
+}
+/* Modifire */
+.badge {
+    background-color: #fff;
+    border: 1px solid var(--color-text);
+    padding: 0.1rem 1.2rem;
+    border-radius: 5rem;
+    height: fit-content;
+    display: flex;
+    align-self: center;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.badge--primary {
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-text-white);
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.block {
+    padding: 2rem;
+}
+.blur-50 {
+    opacity: 0.5;
+}
+.blur-20 {
+    opacity: 0.8;
+}
+.action {
+    color: var(--color-primary);
+    align-items: center;
+}
+.divider {
+    border-bottom: 1px solid #5a5a5a6e;
+    margin: 2rem 0;
+}
+.child {
+    margin-right: 5rem;
+}
+
+/* Accrdion */
+
+/* CV */
+.cv__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cv__header .action {
+    display: flex;
+    gap: 1rem;
+}
+.cv__header .action  span{
+    border: 1px solid var(--color-primary);
+    border-radius: 100px;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.60rem;
+}
+.cv__header .action span i{
+    padding: 0;
+    margin: 0;
+}
+/* Item */
+.item__image {
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--color-text);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
+
+/* Resume */
+.resume__item {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Caption */
+.caption__header {
+    display: flex;
+    justify-content: space-between;
+}
+.header__item {
+    display: flex;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
