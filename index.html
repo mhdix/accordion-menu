@@ -22,13 +22,13 @@
             <h2>رزومه و سوابق</h2>
             <div class="action">
               <span><i class="fa-solid fa-plus"></i></span>
-              <span><i class="fa-solid fa-chevron-up"></i></span>
+              <!-- <span><i class="fa-solid fa-chevron-up"></i></span> -->
             </div>
           </div>
 
           <div class="divider"></div>
 
-          <div class="cv__explanation">
+          <div class="cv__explanation ">
             <h2>درباره ی دانشگاه شریف</h2>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
@@ -49,19 +49,16 @@
         <div class="divider"></div>
 
         <div class="cv__section">
-          <div class="cv__header">
+          <div class="cv__header scool-resume ">
             <h2>سوابق تحصیلی</h2>
             <div class="action">
               <span><i class="fa-solid fa-plus"></i></span>
-              <span><i class="fa-solid fa-chevron-up"></i></span>
+              <span class="chevron"><i class="fa-solid fa-chevron-up"></i></span>
             </div>
           </div>
 
-          <div class="divider"></div>
-
-          <div class="cv__resume"></div>
-
-          <div class="resume">
+          <div class="resume scool">
+            <div class="divider"></div>
             <div class="resume__item child">
               <div class="item__image">
                 <img src="assets/images/skill/University2.jpg" alt="">
@@ -117,17 +114,17 @@
 
           <div class="divider"></div>
 
-          <div class="cv__header">
-            <h2>سوابق تحصیلی</h2>
+          <div class="cv__header work-resume">
+            <h2>سوابق کاری</h2>
             <div class="action">
               <span><i class="fa-solid fa-plus"></i></span>
-              <span><i class="fa-solid fa-chevron-up"></i></span>
+              <span class="chevron"><i class="fa-solid fa-chevron-up"></i></span>
             </div>
           </div>
 
           <div class="divider"></div>
 
-          <div class="resume">
+          <div class="resume work">
             <div class="resume__item child">
               <div class="item__image">
                 <img src="assets/images/skill/sharif.jpg" alt="">
@@ -152,11 +149,27 @@
                 </div>
               </div>
             </div>
-
-            <div class="divider child"></div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+         const workHeader = document.querySelector(".work-resume")
+        const workParent = document.querySelector('.work')
+        workHeader.addEventListener('click' , (e) => {
+            workParent.classList.toggle('resume__expanded')
+            workHeader.classList.toggle('work-expanded')
+          });
+        
+        const resumeHeader = document.querySelector(".scool-resume")
+        const headerIcon = document.querySelector(".scool-expanded")
+        const resumeParent = document.querySelector('.scool')
+        resumeHeader.addEventListener('click' , (e) => {
+          resumeParent.classList.toggle('resume__expanded')
+          resumeHeader.classList.toggle('scool-expanded')
+        });
+
+     
+    </script>
   </body>
 </html>
